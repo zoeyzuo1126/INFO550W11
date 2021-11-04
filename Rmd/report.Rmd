@@ -9,6 +9,7 @@ here::i_am("Rmd/report.Rmd")
 knitr::opts_knit$set(root.dir = here::here())
 ```
 
+
 ##Summary
 For this project, the goal is to study whether the Gross horsepower is associate with the Miles/(US) gallon, Weight (1000 lbs), and Transmission (0 = automatic, 1 = manual). Or in other words, whether there is a significant overall regression of Gross horsepower on (Miles/(US) gallon, Weight (1000 lbs), Transmission (0 = automatic, 1 = manual)).
 Data is an import from the R base, it was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). But we will only select four variables for the analysis: Gross horsepower, Miles/(US) gallon, Weight (1000 lbs), and Transmission (0 = automatic, 1 = manual)
@@ -20,6 +21,8 @@ vs.
 The alternative hypothesis is :At least one of these $\beta$ coefficints $\neq0$.
 Based on the informations from the $summary()$ function, since $p-value: 2.793e-07 < \alpha=0.05$, we are able to reject the null hypothesis and accept the alternative hypothesis. 
 
-
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("figs", "graphs.png"))
+```
 The Residuals vs Fitted plot is used to check the linearity assumption. In this case, the linearity assumption is invalid since the red line is not flat. The Q-Q plot is used to check the normality assumption. The residuals appear to be normally distributed(though there are slight deviations at the tails). The red line is relatively increasing in the Scale-Location plot, thus the homoscedasticity assumption is inviolated. The Residuals vs Leverage plot is used to check outliers and leverage points (a point that is both an outlier and a leverage point is an influential point). It does show there is an outlier may with high leverage. 
 

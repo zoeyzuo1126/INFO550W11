@@ -1,7 +1,7 @@
-report: Rmd/report.Rmd figs/barchart.png
+report: Rmd/report.Rmd figs/graphs.png
 	Rscript -e "rmarkdown::render('Rmd/report.Rmd')"
 
-figs/barchart.png: R/barchart.R
-	Rscript R/barchart.R
+figs/graphs.png: R/graphs.R
+	Rscript R/graphs.R
 
 .PHONY: report

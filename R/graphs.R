@@ -14,3 +14,9 @@ fit<-lm(hp~mpg+wt+am,data=dataset1)
 summary(fit)
 par(mfrow=c(2,2))
 plot(fit)
+
+png(here::here("figs", "graphs.png"))
+par(mfrow=c(2,2))
+plot(fit)
+
+dev.off()
