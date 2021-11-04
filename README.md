@@ -12,6 +12,8 @@ for(p in pkgs){
 	}
 }
 ```
+## OR
+Or you could use renv package to help set up library
 
 ## Execute the analysis
 
