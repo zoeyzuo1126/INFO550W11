@@ -23,3 +23,6 @@ Rscript -e "rmarkdown::render('report.Rmd')"
 ```
 
 This will create a file called report.html output in your directory that contains the results.
+
+## OR
+You could just from the Makefile through terminal to generate report.
